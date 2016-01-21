@@ -1,0 +1,6 @@
+to:
+  image: schmunk42/nginx-redirect
+  ports:
+    - "8888:80"
+  environment:
+    - SERVER_REDIRECT=www.example.com
