@@ -4,3 +4,6 @@ to:
     - "8888:80"
   environment:
     - SERVER_REDIRECT=www.example.com
+    # optionally define path to redirect all requests
+    # if not set nginx var  is used
+    #- SERVER_REDIRECT_PATH=/landingpage
