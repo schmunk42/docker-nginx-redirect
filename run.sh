@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 if [ ! -n "$SERVER_REDIRECT" ] ; then
     echo "Environment variable SERVER_REDIRECT is not set, exiting."
