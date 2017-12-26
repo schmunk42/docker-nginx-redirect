@@ -1,7 +1,5 @@
 # docker-nginx-redirect
 
-:warning: Repository is under initial development
-
 A very simple container to redirect HTTP traffic to another server, based on `nginx`
 
 ## Resources
