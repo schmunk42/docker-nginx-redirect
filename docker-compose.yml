@@ -5,5 +5,8 @@ to:
   environment:
     - SERVER_REDIRECT=www.example.com
     # optionally define path to redirect all requests
-    # if not set nginx var  is used
+    # if not set nginx var $request_uri is used
     #- SERVER_REDIRECT_PATH=/landingpage
+    # optionally define schema to redirect all requests
+    # if not set nginx var $scheme is used
+    #- SERVER_REDIRECT_SCHEME=https
