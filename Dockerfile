@@ -3,4 +3,6 @@ FROM nginx:alpine
 ADD run.sh /run.sh
 ADD default.conf /etc/nginx/conf.d/default.conf
 
-CMD sh run.sh
+RUN chmod +x /run.sh
+
+CMD ["/run.sh"]
