@@ -11,6 +11,8 @@ A very simple container to redirect HTTP traffic to another server, based on `ng
 ### Environment variables
 
 - `SERVER_REDIRECT` - server to redirect to, eg. `www.example.com`
+- `SERVER_NAME` - optionally define the server name to listen on eg. `~^www.(?<subdomain>.+).example.com`
+   useful for capturing variable to use in server_redirect. 
 - `SERVER_REDIRECT_PATH` - optionally define path to redirect all requests eg. `/landingpage`
    if not set nginx var `$request_uri` is used
 - `SERVER_REDIRECT_SCHEME` - optionally define scheme to redirect to 
