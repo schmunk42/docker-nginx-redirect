@@ -11,9 +11,8 @@ if [ ! -n "$SERVER_NAME" ] ; then
 fi
 
 # set redirect code from optional ENV var
-if [ "$SERVER_REDIRECT_CODE" != '302' ] ; then
-    SERVER_REDIRECT_CODE='301'
-fi
+# allowed Status Codes are: 301, 302, 303, 307, 308
+expr match "$SERVER_REDIRECT_CODE" '30[12378]$' > /dev/null || SERVER_REDIRECT_CODE='301'
 
 # set redirect path from optional ENV var
 if [ ! -n "$SERVER_REDIRECT_PATH" ] ; then

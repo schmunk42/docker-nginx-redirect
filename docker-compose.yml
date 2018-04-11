@@ -10,3 +10,6 @@ to:
     # optionally define schema to redirect all requests
     # if not set nginx var $scheme is used
     #- SERVER_REDIRECT_SCHEME=https
+    # optionally define the http code to use for redirection
+    # allowed Codes are: 301, 302, 303, 307, 308, default is 301
+    #- SERVER_REDIRECT_CODE=302
