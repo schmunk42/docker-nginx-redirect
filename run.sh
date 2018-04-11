@@ -11,14 +11,10 @@ if [ ! -n "$SERVER_NAME" ] ; then
 fi
 
 # set redirect code from optional ENV var
-if [ "$SERVER_REDIRECT_CODE" != '302' ] ; then
-    SERVER_REDIRECT_CODE='301'
-fi
++expr match "$SERVER_REDIRECT_CODE" '3\d{2}$' > /dev/null || SERVER_REDIRECT_CODE='301'
 
 # set POST redirect code from optional ENV var
-if [ -z "$SERVER_POST_REDIRECT_CODE" ] ; then
-    SERVER_REDIRECT_CODE='307'
-fi
++expr match "$SERVER_POST_REDIRECT_CODE" '3\d{2}$' > /dev/null || SERVER_POST_REDIRECT_CODE='307'
 
 # set redirect path from optional ENV var
 if [ ! -n "$SERVER_REDIRECT_PATH" ] ; then
