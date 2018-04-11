@@ -12,14 +12,18 @@ A very simple container to redirect HTTP traffic to another server, based on `ng
 
 - `SERVER_REDIRECT` - server to redirect to, eg. `www.example.com`
 - `SERVER_NAME` - optionally define the server name to listen on eg. `~^www.(?<subdomain>.+).example.com`
-   useful for capturing variable to use in server_redirect. 
+   - useful for capturing variable to use in server_redirect. 
 - `SERVER_REDIRECT_PATH` - optionally define path to redirect all requests eg. `/landingpage`
-   if not set nginx var `$request_uri` is used
+   - if not set nginx var `$request_uri` is used
 - `SERVER_REDIRECT_SCHEME` - optionally define scheme to redirect to 
-   if not set nginx var `$scheme` is used
+   - if not set nginx var `$scheme` is used
 - `SERVER_REDIRECT_CODE` - optionally define the http status code to use for redirection
    - if not set or not in list of allowed codes 301 is used as default
    - allowed Codes are: 301, 302, 303, 307, 308
+ - `SERVER_REDIRECT_POST_CODE` - optionally define the http code to use for POST redirection
+    - useful if client should not change the request method from POST to GET
+    - if not set or not in allowed Codes `SERVER_REDIRECT_CODE` is used
+    - so per default all requests will be redirected with the same status code
 
 See also `docker-compose.yml` file.
 
