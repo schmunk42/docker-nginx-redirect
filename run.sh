@@ -15,7 +15,7 @@ fi
 expr match "$SERVER_REDIRECT_CODE" '30[12378]$' > /dev/null || SERVER_REDIRECT_CODE='301'
 
 # set redirect code from optional ENV var for POST requests
-expr match "$SERVER_REDIRECT_POST_CODE" '30[012378]$' > /dev/null || SERVER_REDIRECT_POST_CODE=$SERVER_REDIRECT_CODE
+expr match "$SERVER_REDIRECT_POST_CODE" '30[12378]$' > /dev/null || SERVER_REDIRECT_POST_CODE=$SERVER_REDIRECT_CODE
 
 # set redirect path from optional ENV var
 if [ ! -n "$SERVER_REDIRECT_PATH" ] ; then
