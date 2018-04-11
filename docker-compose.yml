@@ -10,3 +10,6 @@ to:
     # optionally define schema to redirect all requests
     # if not set nginx var $scheme is used
     #- SERVER_REDIRECT_SCHEME=https
+    #- SERVER_REDIRECT_CODE=307
+    # optionally define the http code to redirect all POST requests
+    # if not set nginx 307 is used
