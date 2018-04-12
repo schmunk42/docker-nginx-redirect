@@ -10,6 +10,7 @@ if [ ! -n "$SERVER_NAME" ] ; then
     SERVER_NAME='localhost'
 fi
 
+#code credit: handcode @ https://github.com/schmunk42/docker-nginx-redirect/pull/9
 # set redirect code from optional ENV var
 expr match "$SERVER_REDIRECT_CODE" '3\d{2}$' > /dev/null || SERVER_REDIRECT_CODE='301'
 
