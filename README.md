@@ -17,8 +17,12 @@ A very simple container to redirect HTTP traffic to another server, based on `ng
    if not set nginx var `$request_uri` is used
 - `SERVER_REDIRECT_SCHEME` - optionally define scheme to redirect to 
    if not set nginx var `$scheme` is used
-- `SERVER_REDIRECT_CODE` - optionally define the http code to use for redirection
+- `SERVER_REDIRECT_CODE` - optionally define the http code to use for non-POST redirection
    if not set nginx 301 - is used
+- `SERVER_POST_REDIRECT_CODE` - optionally define the http code to use for POST redirection
+   if not set nginx 307 - is used
+   
+See the nginx documentation for currently supported redirect codes: http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#return
 
 See also `docker-compose.yml` file.
 
