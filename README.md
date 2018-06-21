@@ -24,6 +24,10 @@ A very simple container to redirect HTTP traffic to another server, based on `ng
     - useful if client should not change the request method from POST to GET
     - if not set or not in allowed Codes `SERVER_REDIRECT_CODE` is used
     - so per default all requests will be redirected with the same status code
+- `SERVER_ACCESS_LOG` - optionally define the location where nginx will write its access log
+   - if not set /dev/stdout is used
+- `SERVER_ERROR_LOG` - optionally define the location where nginx will write its error log
+   - if not set /dev/stderr is used
 
 See also `docker-compose.yml` file.
 
