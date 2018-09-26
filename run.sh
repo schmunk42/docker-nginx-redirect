@@ -24,7 +24,7 @@ fi
 
 # set redirect scheme from optional ENV var
 if [ ! -n "$SERVER_REDIRECT_SCHEME" ] ; then
-    SERVER_REDIRECT_SCHEME='$scheme'
+    SERVER_REDIRECT_SCHEME='$redirect_scheme'
 fi
 
 # set access log location from optional ENV var
