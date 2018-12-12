@@ -8,7 +8,8 @@ to:
     # if not set nginx var $request_uri is used
     #- SERVER_REDIRECT_PATH=/landingpage
     # optionally define schema to redirect all requests
-    # if not set nginx var $scheme is used
+    # if not set but X-Forwarded-Proto is send as request header with value 'https' this will be used.
+    # In all other cases nginx var `$scheme` is used
     #- SERVER_REDIRECT_SCHEME=https
     # optionally define the http code to use for redirection
     # allowed Codes are: 301, 302, 303, 307, 308, default is 301
