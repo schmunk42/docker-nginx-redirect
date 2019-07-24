@@ -23,3 +23,6 @@ to:
     # optionally define the location for the nginx error log
     # if not set /dev/stderr is used
     #- SERVER_ERROR_LOG=/dev/null
+    # optionally define the path to answer 200 OK on for external health checks.
+    #- HEALTH_CHECK_PATH=healthz
+

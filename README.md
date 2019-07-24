@@ -29,6 +29,8 @@ A very simple container to redirect HTTP traffic to another server, based on `ng
    - if not set /dev/stdout is used
 - `SERVER_ERROR_LOG` - optionally define the location where nginx will write its error log
    - if not set /dev/stderr is used
+- 'HEALTH_CHECK_PATH' optionally define the path to answer 200 OK on for external health checks.
+   - Some services like Google Cloud LB requires 200 OK answers to declare a pod healthy.
 
 See also `docker-compose.yml` file.
 
