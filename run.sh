@@ -39,7 +39,7 @@ fi
 
 # set endpoint for healthcheck from optional ENV var
 if [ -n "$HEALTH_CHECK_PATH" ] ; then
-    HEALTH_CHECK_STANZA="location = /$HEALTH_CHECK_PATH {\n        return 200 \"healthy\\\n\";\n    }"
+    HEALTH_CHECK_STANZA="location = $HEALTH_CHECK_PATH {\n        return 200 \"healthy\\\n\";\n    }"
 else
     HEALTH_CHECK_STANZA=""
 fi
