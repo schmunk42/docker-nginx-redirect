@@ -17,6 +17,9 @@ to:
     # optionally define the http code to redirect POST requests
     # if not set or not in allowed Codes, SERVER_REDIRECT_CODE will be used
     #- SERVER_REDIRECT_POST_CODE=
+    # optionally define the http code to redirect PUT, PATCH and DELETE requests
+    # if not set or not in allowed Codes, SERVER_REDIRECT_CODE will be used
+    #- SERVER_REDIRECT_PUT_PATCH_DELETE_CODE=
     # optionally define the location for the nginx access log
     # if not set /dev/stdout is used
     #- SERVER_ACCESS_LOG=/dev/null
