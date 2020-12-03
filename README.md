@@ -33,6 +33,15 @@ A very simple container to redirect HTTP traffic to another server, based on `ng
    - if not set /dev/stdout is used
 - `SERVER_ERROR_LOG` - optionally define the location where nginx will write its error log
    - if not set /dev/stderr is used
+- `SERVER_HEALTHCHECK_ENABLED` - optionally enable a static healthcheck endpoint by setting `SERVER_HEALTHCHECK_ENABLED=1`
+   - useful for deploying to Kubernetes or similar infrastructure where readiness needs to be confirmed and monitored
+   - disabled by default
+- `SERVER_HEALTHCHECK_PATH` - optionally override the location of the healthcheck endpoint
+   - defaults to `/healthcheck`
+- `SERVER_HEALTHCHECK_RESPONSE_CODE` - optionally override the status code of the healthcheck endpoint response
+   - defaults to `200`
+- `SERVER_HEALTHCHECK_RESPONSE_BODY` - optionally override the body of the healthcheck endpoint response
+   - defaults to `alive`
 
 See also `docker-compose.yml` file.
 

@@ -26,3 +26,5 @@ to:
     # optionally define the location for the nginx error log
     # if not set /dev/stderr is used
     #- SERVER_ERROR_LOG=/dev/null
+    # optionally enable the healthcheck endpoint
+    #- SERVER_HEALTHCHECK_ENABLED=1
